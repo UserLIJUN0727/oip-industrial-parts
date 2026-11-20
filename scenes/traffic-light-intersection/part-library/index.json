@@ -1,0 +1,26 @@
+{
+  "format": 1,
+  "id": "userlijun0727.traffic-intersection-library",
+  "name": "Traffic Intersection Training Parts",
+  "licence": {
+    "code": "MIT",
+    "assets": "MIT"
+  },
+  "parts": [
+    {
+      "id": "userlijun0727.traffic-intersection",
+      "name": "Four-Way Traffic Intersection",
+      "versions": [
+        {
+          "file": "userlijun0727.traffic-intersection/98d9343eea4b243d85b2f7307b37bc3eeef917653ac89dd6cffe6511104308ed.oippart",
+          "sha256": "98d9343eea4b243d85b2f7307b37bc3eeef917653ac89dd6cffe6511104308ed",
+          "fingerprint": "v2:25383:tyr5ywtca2",
+          "sdk": 16,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Training Equipment",
+      "description": "Procedural four-way road intersection with lane markings, four traffic-light sets, and simplified straight-through vehicles. Model package; PLC training scene is in the sibling project folder."
+    }
+  ]
+}

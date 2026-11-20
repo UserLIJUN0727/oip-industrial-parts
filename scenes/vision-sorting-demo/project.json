@@ -1,0 +1,22 @@
+{
+  "version": 7,
+  "name": "Vision Sorting Demo",
+  "packages": [
+    "parts/user.part-2",
+    "parts/oip.agv",
+    "parts/oip.box",
+    "parts/oip.stretch-wrapper",
+    "parts/oip.rack",
+    "parts/oip.push-button",
+    "parts/oip.stack-light",
+    "parts/oip.floor-marking"
+  ],
+  "scene": "scene.json",
+  "program": [
+    "plc/program.st"
+  ],
+  "tests": [
+    "tests/starter.test.json",
+    "tests/estop-recovery.test.json"
+  ]
+}

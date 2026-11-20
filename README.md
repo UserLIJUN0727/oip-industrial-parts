@@ -11,6 +11,15 @@ This is a personal Open Industry Project (OIP) part library. The first release c
 
 Each published `.oippart` is a portable OIP package containing its manifest, behavior source, and model assets. The original imported part folders are preserved under `source/`; the package builder never changes those source manifests. License metadata is currently **All rights reserved** for both code and model assets; no open-use license is granted.
 
+## Training scenes
+
+The repository is public. These two OIP training projects are kept in separate folders so they can be downloaded and opened independently:
+
+- [Vision Sorting Demo](scenes/vision-sorting-demo/README.md) — simulated RGB sorting, palletizing, wrapping, and AGV delivery.
+- [Four-Way Traffic Intersection](scenes/traffic-light-intersection/README.md) — a two-road signal cycle with a reusable intersection model.
+
+The scene folders have their own scoped MIT licenses. Those licenses do **not** change the rights for the four existing models listed above. The Vision Sorting Demo also includes unmodified OIP component copies; see its third-party notice.
+
 ## Add future parts
 
 1. Copy a new OIP part folder (it must contain `manifest.json`, `behavior.js`, and its `assets/` files) into a new folder under `source/`, using a unique lowercase folder slug.
@@ -25,4 +34,8 @@ The builder appends a new, hash-named version only when a part changes; it does 
 
 ## Hosting status
 
-Local library prepared. A GitHub URL is not included yet because the repository's public/private visibility has not been confirmed. OIP's external-library URL must be reachable by the app; a public raw GitHub `index.json` URL is the simplest option. Do not publish this folder publicly until the owner approves public visibility.
+Public repository: https://github.com/UserLIJUN0727/oip-industrial-parts
+
+Existing parts library URL: https://raw.githubusercontent.com/UserLIJUN0727/oip-industrial-parts/main/index.json
+
+The traffic-intersection model has a separate scoped OIP library index at `scenes/traffic-light-intersection/part-library/index.json`. The Vision Sorting Demo is a project assembly rather than a standalone custom mesh; its full project and part copies are in `scenes/vision-sorting-demo/`.

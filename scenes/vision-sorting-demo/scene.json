@@ -1,0 +1,1829 @@
+{
+  "version": 4,
+  "parts": [
+    {
+      "id": "bld_1",
+      "name": "Building",
+      "locked": true,
+      "type": "building",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "lengthSections": 5,
+        "widthSections": 4,
+        "heightSections": 1,
+        "columnSpacing": 0,
+        "rules": [
+          {
+            "wall": "B",
+            "run": 1,
+            "gap": 1,
+            "count": 2,
+            "start": 1,
+            "doorCount": 1,
+            "trailer": true
+          },
+          {
+            "wall": "B",
+            "run": 1,
+            "gap": 1,
+            "count": 2,
+            "start": 24,
+            "doorCount": 1,
+            "trailer": true
+          },
+          {
+            "wall": "A",
+            "run": 1,
+            "gap": 2,
+            "count": 2,
+            "start": 32,
+            "doorCount": 1,
+            "trailer": true
+          },
+          {
+            "wall": "A",
+            "run": 1,
+            "gap": 2,
+            "count": 2,
+            "start": 28,
+            "doorCount": 1,
+            "trailer": true
+          },
+          {
+            "wall": "dock_door",
+            "run": 1,
+            "gap": 1,
+            "count": 1,
+            "start": 2,
+            "doorCount": 2,
+            "trailer": true
+          }
+        ],
+        "floorVisible": true,
+        "wallsVisible": true,
+        "roofVisible": true,
+        "brightness": 1,
+        "backgroundColor": "#9fb1c4"
+      }
+    },
+    {
+      "id": "pt_color_sensor_1",
+      "name": "RGB Color Sensor",
+      "type": "part",
+      "packageId": "oip.color-sensor",
+      "position": [
+        3.5,
+        0.78,
+        0.819
+      ],
+      "rotationY": 3.141593,
+      "params": {
+        "maxRange": 1.564,
+        "showBeam": true,
+        "enableComms": true,
+        "colorTag": "ColorCode"
+      }
+    },
+    {
+      "id": "belt-main",
+      "type": "part",
+      "packageId": "oip.belt-conveyor",
+      "position": [
+        0.085,
+        0.8,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "shapePreset": "straight",
+        "segments": [
+          [
+            4,
+            0
+          ]
+        ],
+        "width": 1.524,
+        "height": 0.17,
+        "standHeight": 0.8,
+        "fpmUnits": false,
+        "speedFpm": 394,
+        "speed": 2,
+        "accelTime": 0.5,
+        "decelTime": 0.5,
+        "beltColor": "#ffffff",
+        "beltTexture": "standard",
+        "frameRails": true,
+        "leftGuard": true,
+        "rightGuard": true,
+        "guardOpenings": [],
+        "guardHoles": [],
+        "guardMitres": [],
+        "railCuts": [],
+        "guardExtents": [],
+        "legs": true,
+        "legRests": [],
+        "tailLeg": true,
+        "tailLegOffset": 0.15,
+        "tailLegClearance": 1,
+        "headLeg": true,
+        "headLegOffset": 0.15,
+        "headLegClearance": 1,
+        "middleLegs": true,
+        "legSpacing": 3.05,
+        "exclusionStart": 0,
+        "exclusionEnd": 0,
+        "enableComms": true,
+        "speedTag": "",
+        "speedFpmTag": "",
+        "runTag": "Belt1Run",
+        "runningTag": "",
+        "speedAt30": 2,
+        "speedAt30Fpm": 394,
+        "velocityTag": "",
+        "inchesPerPulse": 1,
+        "pulseTag": "",
+        "encoderTag": ""
+      }
+    },
+    {
+      "id": "box-feeder",
+      "type": "part",
+      "packageId": "oip.box-spawner",
+      "position": [
+        0.45,
+        1.25,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "boxesPerMinute": 12,
+        "fixedRate": true,
+        "product": "oip.box",
+        "productSettings": "",
+        "boxColor": "#ffffff",
+        "boxColors": "#ff0000,#00ff00,#0000ff",
+        "mixAttribute": "",
+        "mixValues": "",
+        "randomColors": false,
+        "length": 0.6,
+        "width": 0.4,
+        "height": 0.4,
+        "randomSize": false,
+        "mass": 10,
+        "disable": false,
+        "release": "enable",
+        "keepSpacing": true,
+        "conveyorId": "belt-main",
+        "enableComms": true,
+        "runTag": "SpawnerRun",
+        "countTag": ""
+      }
+    },
+    {
+      "id": "presence-eye",
+      "type": "part",
+      "packageId": "oip.diffuse-sensor",
+      "position": [
+        3.57,
+        0.78,
+        0.819
+      ],
+      "rotationY": 3.141593,
+      "params": {
+        "maxRange": 1.564,
+        "mode": "diffuse",
+        "showBeam": true,
+        "normallyClosed": false,
+        "mark": "",
+        "enableComms": true,
+        "tag": "DischargeEye"
+      }
+    },
+    {
+      "id": "start-button",
+      "parent": "belt-main",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        0.3,
+        0.8,
+        -0.792
+      ],
+      "rotationY": 3.141593,
+      "params": {
+        "emergencyStop": false,
+        "text": "START",
+        "buttonColor": "#2e9e44",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "tag",
+        "enableComms": true,
+        "tag": "StartPB",
+        "lampTag": "Running"
+      }
+    },
+    {
+      "id": "stop-button",
+      "parent": "belt-main",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        0.55,
+        0.8,
+        -0.792
+      ],
+      "rotationY": 3.141593,
+      "params": {
+        "emergencyStop": false,
+        "text": "STOP",
+        "buttonColor": "#b3140f",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "press",
+        "enableComms": true,
+        "tag": "StopPB",
+        "lampTag": ""
+      }
+    },
+    {
+      "id": "sorting-arm",
+      "name": "Color Sorting Robot",
+      "type": "part",
+      "packageId": "oip.six-axis-robot",
+      "position": [
+        3.2,
+        0,
+        -1.2
+      ],
+      "rotationY": 0,
+      "params": {
+        "speed": 90,
+        "accel": 360,
+        "scale": 1,
+        "toolSizeX": 0.6,
+        "toolSizeZ": 0.5,
+        "cupPitchX": 0.1,
+        "cupPitchZ": 0.1,
+        "cupMarginX": 0.05,
+        "cupMarginZ": 0.05,
+        "cupsEnabled": true,
+        "enableComms": true,
+        "commandTag": "RobotCommand",
+        "executeTag": "RobotExecute",
+        "doneTag": "RobotDone",
+        "enableTag": "RobotEnable",
+        "gripperTag": "",
+        "in1Tag": "",
+        "in2Tag": "",
+        "in3Tag": "",
+        "in4Tag": "",
+        "out1Tag": "",
+        "out2Tag": "",
+        "out3Tag": "",
+        "out4Tag": "",
+        "waypoints": [
+          [
+            -0.3,
+            -55.86,
+            -45.65,
+            0,
+            -78.49,
+            0
+          ],
+          [
+            -64.17,
+            -40.37,
+            -34.76,
+            0,
+            -104.87,
+            0
+          ],
+          [
+            -64.17,
+            -40.38,
+            -53.75,
+            0,
+            -85.88,
+            0
+          ],
+          [
+            138.37,
+            -62.42,
+            -11.88,
+            0,
+            -104.72,
+            0
+          ],
+          [
+            138.37,
+            -64.12,
+            -31.37,
+            0,
+            -85.26,
+            0
+          ],
+          [
+            138.34,
+            -61.72,
+            5.68,
+            0.09,
+            -108.16,
+            0
+          ],
+          [
+            138.39,
+            -62.86,
+            -14.9,
+            -0.08,
+            -102.97,
+            0
+          ],
+          [
+            138.3,
+            -53.91,
+            5.93,
+            0.22,
+            -92.81,
+            0
+          ],
+          [
+            138.35,
+            -63.27,
+            5.1,
+            0.06,
+            -110.23,
+            0
+          ],
+          [
+            89.62,
+            -30.23,
+            -69.72,
+            -0.08,
+            -82.25,
+            0
+          ],
+          [
+            89.58,
+            -38.67,
+            -80.66,
+            -0.01,
+            -61.45,
+            0
+          ],
+          [
+            89.72,
+            -27.62,
+            -54.59,
+            -0.3,
+            -98.21,
+            0
+          ],
+          [
+            89.58,
+            -30.9,
+            -72.68,
+            -0.01,
+            -77.21,
+            0
+          ],
+          [
+            89.58,
+            -32.46,
+            -27.44,
+            0.01,
+            -119.35,
+            0
+          ],
+          [
+            89.62,
+            -27.49,
+            -58.66,
+            -0.1,
+            -94.03,
+            0
+          ],
+          [
+            41.07,
+            -62.42,
+            -11.86,
+            0,
+            -104.73,
+            0
+          ],
+          [
+            41.07,
+            -64.12,
+            -31.37,
+            0,
+            -85.26,
+            0
+          ],
+          [
+            41.04,
+            -61.71,
+            5.68,
+            0.09,
+            -108.15,
+            0
+          ],
+          [
+            41.09,
+            -62.86,
+            -14.9,
+            -0.08,
+            -102.97,
+            0
+          ],
+          [
+            41,
+            -53.91,
+            5.93,
+            0.22,
+            -92.79,
+            0
+          ],
+          [
+            41.05,
+            -63.27,
+            5.1,
+            0.06,
+            -110.23,
+            0
+          ]
+        ],
+        "waypointNames": "Home\nApproach Pick\nPick\nRed approach layer 1\nRed place layer 1\nRed approach layer 2\nRed place layer 2\nRed approach layer 3\nRed place layer 3\nGreen approach layer 1\nGreen place layer 1\nGreen approach layer 2\nGreen place layer 2\nGreen approach layer 3\nGreen place layer 3\nBlue approach layer 1\nBlue place layer 1\nBlue approach layer 2\nBlue place layer 2\nBlue approach layer 3\nBlue place layer 3",
+        "blendWaypoints": [],
+        "blendDeg": 12,
+        "jobs": [
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0.2,
+            0
+          ],
+          [
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            4,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0.2,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            3,
+            0.2,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            5,
+            0
+          ],
+          [
+            1,
+            1,
+            6,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            0.2,
+            0
+          ],
+          [
+            1,
+            1,
+            5,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            3,
+            0.2,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            7,
+            0
+          ],
+          [
+            2,
+            1,
+            8,
+            0
+          ],
+          [
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            0.2,
+            0
+          ],
+          [
+            2,
+            1,
+            7,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            3,
+            3,
+            0.2,
+            0
+          ],
+          [
+            3,
+            1,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            9,
+            0
+          ],
+          [
+            3,
+            1,
+            10,
+            0
+          ],
+          [
+            3,
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            0.2,
+            0
+          ],
+          [
+            3,
+            1,
+            9,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            2,
+            0
+          ],
+          [
+            4,
+            2,
+            1,
+            0
+          ],
+          [
+            4,
+            3,
+            0.2,
+            0
+          ],
+          [
+            4,
+            1,
+            1,
+            0
+          ],
+          [
+            4,
+            1,
+            11,
+            0
+          ],
+          [
+            4,
+            1,
+            12,
+            0
+          ],
+          [
+            4,
+            2,
+            0,
+            0
+          ],
+          [
+            4,
+            3,
+            0.2,
+            0
+          ],
+          [
+            4,
+            1,
+            11,
+            0
+          ],
+          [
+            4,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            1,
+            1,
+            0
+          ],
+          [
+            5,
+            1,
+            2,
+            0
+          ],
+          [
+            5,
+            2,
+            1,
+            0
+          ],
+          [
+            5,
+            3,
+            0.2,
+            0
+          ],
+          [
+            5,
+            1,
+            1,
+            0
+          ],
+          [
+            5,
+            1,
+            13,
+            0
+          ],
+          [
+            5,
+            1,
+            14,
+            0
+          ],
+          [
+            5,
+            2,
+            0,
+            0
+          ],
+          [
+            5,
+            3,
+            0.2,
+            0
+          ],
+          [
+            5,
+            1,
+            13,
+            0
+          ],
+          [
+            5,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            1,
+            1,
+            0
+          ],
+          [
+            6,
+            1,
+            2,
+            0
+          ],
+          [
+            6,
+            2,
+            1,
+            0
+          ],
+          [
+            6,
+            3,
+            0.2,
+            0
+          ],
+          [
+            6,
+            1,
+            1,
+            0
+          ],
+          [
+            6,
+            1,
+            15,
+            0
+          ],
+          [
+            6,
+            1,
+            16,
+            0
+          ],
+          [
+            6,
+            2,
+            0,
+            0
+          ],
+          [
+            6,
+            3,
+            0.2,
+            0
+          ],
+          [
+            6,
+            1,
+            15,
+            0
+          ],
+          [
+            6,
+            1,
+            0,
+            0
+          ],
+          [
+            7,
+            1,
+            1,
+            0
+          ],
+          [
+            7,
+            1,
+            2,
+            0
+          ],
+          [
+            7,
+            2,
+            1,
+            0
+          ],
+          [
+            7,
+            3,
+            0.2,
+            0
+          ],
+          [
+            7,
+            1,
+            1,
+            0
+          ],
+          [
+            7,
+            1,
+            17,
+            0
+          ],
+          [
+            7,
+            1,
+            18,
+            0
+          ],
+          [
+            7,
+            2,
+            0,
+            0
+          ],
+          [
+            7,
+            3,
+            0.2,
+            0
+          ],
+          [
+            7,
+            1,
+            17,
+            0
+          ],
+          [
+            7,
+            1,
+            0,
+            0
+          ],
+          [
+            8,
+            1,
+            1,
+            0
+          ],
+          [
+            8,
+            1,
+            2,
+            0
+          ],
+          [
+            8,
+            2,
+            1,
+            0
+          ],
+          [
+            8,
+            3,
+            0.2,
+            0
+          ],
+          [
+            8,
+            1,
+            1,
+            0
+          ],
+          [
+            8,
+            1,
+            19,
+            0
+          ],
+          [
+            8,
+            1,
+            20,
+            0
+          ],
+          [
+            8,
+            2,
+            0,
+            0
+          ],
+          [
+            8,
+            3,
+            0.2,
+            0
+          ],
+          [
+            8,
+            1,
+            19,
+            0
+          ],
+          [
+            8,
+            1,
+            0,
+            0
+          ]
+        ],
+        "jobNames": "Red pallet - layer 1\nRed pallet - layer 2\nRed pallet - layer 3\nGreen pallet - layer 1\nGreen pallet - layer 2\nGreen pallet - layer 3\nBlue pallet - layer 1\nBlue pallet - layer 2\nBlue pallet - layer 3",
+        "pose": [
+          [
+            -0.3,
+            -55.86,
+            -45.65,
+            0,
+            -78.49,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "pallet-red",
+      "type": "part",
+      "packageId": "oip.pallet",
+      "position": [
+        1.95,
+        0.0675,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "size": "1219x1016",
+        "mass": 20,
+        "color": "#ff5555"
+      }
+    },
+    {
+      "id": "pallet-green",
+      "type": "part",
+      "packageId": "oip.pallet",
+      "position": [
+        3.2,
+        0.0675,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "size": "1219x1016",
+        "mass": 20,
+        "color": "#55dd66"
+      }
+    },
+    {
+      "id": "pallet-blue",
+      "type": "part",
+      "packageId": "oip.pallet",
+      "position": [
+        4.45,
+        0.0675,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "size": "1219x1016",
+        "mass": 20,
+        "color": "#5599ff"
+      }
+    },
+    {
+      "id": "note-cell-title",
+      "name": "Vision Sorting Cell",
+      "type": "annotation",
+      "position": [
+        2.3,
+        2.75,
+        1.1
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "RGB视觉分拣实训",
+        "icon": "info",
+        "tag": "",
+        "unit": "",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "note-infeed",
+      "name": "进料与检测",
+      "type": "annotation",
+      "position": [
+        0.45,
+        1.8,
+        0.2
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "① 上料 · 颜色识别",
+        "icon": "arrow",
+        "tag": "",
+        "unit": "",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "note-robot",
+      "name": "PLC控制机械臂",
+      "type": "annotation",
+      "position": [
+        3.2,
+        2,
+        -0.7
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "② PLC分类 · 机械臂分拣",
+        "icon": "flag",
+        "tag": "",
+        "unit": "",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "note-red-output",
+      "name": "红色托盘计数",
+      "type": "annotation",
+      "position": [
+        1.95,
+        1,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "红",
+        "icon": "count",
+        "tag": "RedCount",
+        "unit": "件",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "note-green-output",
+      "name": "绿色托盘计数",
+      "type": "annotation",
+      "position": [
+        3.2,
+        1,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "绿",
+        "icon": "count",
+        "tag": "GreenCount",
+        "unit": "件",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "note-blue-output",
+      "name": "蓝色托盘计数",
+      "type": "annotation",
+      "position": [
+        4.45,
+        1,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "蓝",
+        "icon": "count",
+        "tag": "BlueCount",
+        "unit": "件",
+        "decimals": 0
+      }
+    },
+    {
+      "id": "color-forklift",
+      "type": "part",
+      "packageId": "oip.agv",
+      "position": [
+        -4,
+        0,
+        -5
+      ],
+      "rotationY": 0,
+      "params": {
+        "driveSpeed": 1.2,
+        "turnSpeed": 90,
+        "liftSpeed": 1.2,
+        "maxLiftHeight": 0.5,
+        "forkSpread": 0.73,
+        "reverseRange": 3.5,
+        "commandTag": "AgvCommand",
+        "executeTag": "AgvExecute",
+        "doneTag": "AgvIdle",
+        "forkTag": "AgvFork",
+        "waypoints": [
+          [
+            -4,
+            -5,
+            0,
+            0
+          ],
+          [
+            1.95,
+            -6.8,
+            -90,
+            0
+          ],
+          [
+            1.95,
+            -6.8,
+            -90,
+            0.01875
+          ],
+          [
+            1.95,
+            -3.75,
+            -90,
+            0.01875
+          ],
+          [
+            1.95,
+            -3.75,
+            -90,
+            0.0905
+          ],
+          [
+            1.95,
+            -6.8,
+            -90,
+            0.0905
+          ],
+          [
+            -1.5,
+            -6.8,
+            0,
+            0.0905
+          ],
+          [
+            -1.5,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            -6.5,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            -6.5,
+            0,
+            0.0905
+          ],
+          [
+            8,
+            -6.5,
+            0,
+            0.027
+          ],
+          [
+            3.2,
+            -6.8,
+            -90,
+            0
+          ],
+          [
+            3.2,
+            -6.8,
+            -90,
+            0.01875
+          ],
+          [
+            3.2,
+            -3.75,
+            -90,
+            0.01875
+          ],
+          [
+            3.2,
+            -3.75,
+            -90,
+            0.0905
+          ],
+          [
+            3.2,
+            -6.8,
+            -90,
+            0.0905
+          ],
+          [
+            -1.5,
+            -6.8,
+            0,
+            0.0905
+          ],
+          [
+            -1.5,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            -2.5,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            -2.5,
+            0,
+            0.0905
+          ],
+          [
+            8,
+            -2.5,
+            0,
+            0.027
+          ],
+          [
+            4.45,
+            -6.8,
+            -90,
+            0
+          ],
+          [
+            4.45,
+            -6.8,
+            -90,
+            0.01875
+          ],
+          [
+            4.45,
+            -3.75,
+            -90,
+            0.01875
+          ],
+          [
+            4.45,
+            -3.75,
+            -90,
+            0.0905
+          ],
+          [
+            4.45,
+            -6.8,
+            -90,
+            0.0905
+          ],
+          [
+            -1.5,
+            -6.8,
+            0,
+            0.0905
+          ],
+          [
+            -1.5,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.0905
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            6.55,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            3,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            1.5,
+            0,
+            0.2405
+          ],
+          [
+            10.85,
+            1.5,
+            0,
+            0.0905
+          ],
+          [
+            8,
+            1.5,
+            0,
+            0.027
+          ]
+        ],
+        "enableTag": "AgvEnable"
+      }
+    },
+    {
+      "id": "pallet-wrapper",
+      "type": "part",
+      "packageId": "oip.stretch-wrapper",
+      "position": [
+        8,
+        0.2,
+        3
+      ],
+      "rotationY": 0,
+      "params": {
+        "rpm": 18,
+        "overlap": 60,
+        "liftSpeed": 0.15,
+        "baseTurns": 1.5,
+        "topTurns": 1.5,
+        "autoWrap": false,
+        "standHeight": 0.2,
+        "frameColor": "#24507a",
+        "armColor": "#f2bd0f",
+        "showBeam": true,
+        "startTag": "WrapperStart",
+        "enableTag": "WrapperEnable",
+        "busyTag": "WrapperBusy",
+        "doneTag": "WrapDone",
+        "inPositionTag": "WrapInPos"
+      }
+    },
+    {
+      "id": "red-warehouse-rack",
+      "name": "Red Warehouse",
+      "type": "part",
+      "packageId": "oip.rack",
+      "position": [
+        13.5,
+        0,
+        -6.5
+      ],
+      "rotationY": 1.570796,
+      "params": {
+        "length": 2.7,
+        "depth": 1.1,
+        "numShelves": 2,
+        "shelfSpacing": 1.6,
+        "enableAutoPoles": true,
+        "poleInterval": 2.7,
+        "shelfColor": "#8e939a",
+        "frameColor": "#2e5c96",
+        "beamColor": "#ff3434",
+        "aisle": "RED",
+        "locationLabels": true
+      }
+    },
+    {
+      "id": "green-warehouse-rack",
+      "name": "Green Warehouse",
+      "type": "part",
+      "packageId": "oip.rack",
+      "position": [
+        13.5,
+        0,
+        -2.5
+      ],
+      "rotationY": 1.570796,
+      "params": {
+        "length": 2.7,
+        "depth": 1.1,
+        "numShelves": 2,
+        "shelfSpacing": 1.6,
+        "enableAutoPoles": true,
+        "poleInterval": 2.7,
+        "shelfColor": "#8e939a",
+        "frameColor": "#2e5c96",
+        "beamColor": "#25b85a",
+        "aisle": "GREEN",
+        "locationLabels": true
+      }
+    },
+    {
+      "id": "blue-warehouse-rack",
+      "name": "Blue Warehouse",
+      "type": "part",
+      "packageId": "oip.rack",
+      "position": [
+        13.5,
+        0,
+        1.5
+      ],
+      "rotationY": 1.570796,
+      "params": {
+        "length": 2.7,
+        "depth": 1.1,
+        "numShelves": 2,
+        "shelfSpacing": 1.6,
+        "enableAutoPoles": true,
+        "poleInterval": 2.7,
+        "shelfColor": "#8e939a",
+        "frameColor": "#2e5c96",
+        "beamColor": "#2782d2",
+        "aisle": "BLUE",
+        "locationLabels": true
+      }
+    },
+    {
+      "id": "reset-button",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        0.8,
+        0.8,
+        -0.792
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "RESET",
+        "buttonColor": "#2e9e44",
+        "tag": "ResetPB",
+        "lampSource": "tag",
+        "lampTag": "EStopResetReady"
+      }
+    },
+    {
+      "id": "emergency-stop",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        1.05,
+        0.8,
+        -0.792
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": true,
+        "text": "E-STOP",
+        "tag": "EStopOK"
+      }
+    },
+    {
+      "id": "stack-light",
+      "type": "part",
+      "packageId": "oip.stack-light",
+      "position": [
+        1.4,
+        0,
+        -1.15
+      ],
+      "rotationY": 0,
+      "params": {
+        "value": 2,
+        "tag": "StackLightValue"
+      }
+    },
+    {
+      "id": "marking-sorting-cell",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        2.3,
+        0,
+        -1.2
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 4.8,
+        "width": 5.3,
+        "style": "border",
+        "borderWidth": 0.14
+      }
+    },
+    {
+      "id": "marking-agv-lane",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        4,
+        0,
+        -6.8
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 14,
+        "width": 1.5,
+        "style": "dashed",
+        "stripeSize": 0.25,
+        "secondaryColor": "#242424"
+      }
+    },
+    {
+      "id": "marking-red-pallet",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        1.95,
+        0,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 1.55,
+        "width": 1.35,
+        "style": "border",
+        "borderWidth": 0.12,
+        "primaryColor": "#ff3434"
+      }
+    },
+    {
+      "id": "marking-green-pallet",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        3.2,
+        0,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 1.55,
+        "width": 1.35,
+        "style": "border",
+        "borderWidth": 0.12,
+        "primaryColor": "#25b85a"
+      }
+    },
+    {
+      "id": "marking-blue-pallet",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        4.45,
+        0,
+        -2.3
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 1.55,
+        "width": 1.35,
+        "style": "border",
+        "borderWidth": 0.12,
+        "primaryColor": "#2782d2"
+      }
+    },
+    {
+      "id": "marking-wrapper-zone",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        8,
+        0,
+        3
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 5,
+        "width": 4,
+        "style": "border",
+        "borderWidth": 0.16,
+        "primaryColor": "#e8a900"
+      }
+    },
+    {
+      "id": "marking-red-warehouse",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        13.5,
+        0,
+        -6.5
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 5.8,
+        "width": 1.6,
+        "style": "border",
+        "borderWidth": 0.15,
+        "primaryColor": "#ff3434"
+      }
+    },
+    {
+      "id": "marking-green-warehouse",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        13.5,
+        0,
+        -2.5
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 5.8,
+        "width": 1.6,
+        "style": "border",
+        "borderWidth": 0.15,
+        "primaryColor": "#25b85a"
+      }
+    },
+    {
+      "id": "marking-blue-warehouse",
+      "type": "part",
+      "packageId": "oip.floor-marking",
+      "position": [
+        13.5,
+        0,
+        1.5
+      ],
+      "rotationY": 0,
+      "params": {
+        "length": 5.8,
+        "width": 1.6,
+        "style": "border",
+        "borderWidth": 0.15,
+        "primaryColor": "#2782d2"
+      }
+    }
+  ]
+}

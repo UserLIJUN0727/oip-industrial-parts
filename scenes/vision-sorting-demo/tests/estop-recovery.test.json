@@ -1,0 +1,28 @@
+{
+  "name": "Emergency stop, manual reset, and resume the current pallet route",
+  "duration": 500,
+  "inputs": [
+    { "at": 130, "tag": "EStopOK", "value": false },
+    { "at": 135, "tag": "EStopOK", "value": true },
+    { "at": 136, "tag": "ResetPB", "value": true },
+    { "at": 136.4, "tag": "ResetPB", "value": false },
+    { "at": 137, "tag": "StartPB", "value": true },
+    { "at": 137.4, "tag": "StartPB", "value": false }
+  ],
+  "checks": [
+    { "eventually": true, "within": 1, "tag": "Running", "equals": true },
+    { "always": true, "from": 130.1, "until": 134.9, "tag": "Running", "equals": false },
+    { "always": true, "from": 130.1, "until": 134.9, "tag": "EStopLatched", "equals": true },
+    { "always": true, "from": 130.1, "until": 134.9, "tag": "AgvEnable", "equals": false },
+    { "always": true, "from": 130.1, "until": 134.9, "tag": "StackLightValue", "equals": 4 },
+    { "eventually": true, "from": 135, "until": 136, "tag": "EStopResetReady", "equals": true },
+    { "always": true, "from": 135, "until": 136, "tag": "Running", "equals": false },
+    { "eventually": true, "from": 136, "until": 137, "tag": "EStopLatched", "equals": false },
+    { "eventually": true, "from": 137, "until": 138, "tag": "Running", "equals": true },
+    { "eventually": true, "within": 500, "tag": "StackLightValue", "equals": 1 },
+    { "eventually": true, "within": 500, "tag": "DeliveredRed", "equals": 1 },
+    { "eventually": true, "within": 500, "tag": "DeliveredGreen", "equals": 1 },
+    { "eventually": true, "within": 500, "tag": "DeliveredBlue", "equals": 1 },
+    { "eventually": true, "within": 500, "tag": "SortDone", "equals": true }
+  ]
+}

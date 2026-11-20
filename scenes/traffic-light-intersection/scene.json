@@ -1,0 +1,45 @@
+{
+  "version": 4,
+  "units": "metric",
+  "parts": [
+    {
+      "id": "intersection",
+      "type": "part",
+      "packageId": "training.traffic-intersection",
+      "name": "Four-Way Traffic Intersection",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "nsRedTag": "NS_Red",
+        "nsYellowTag": "NS_Yellow",
+        "nsGreenTag": "NS_Green",
+        "ewRedTag": "EW_Red",
+        "ewYellowTag": "EW_Yellow",
+        "ewGreenTag": "EW_Green",
+        "conflictTag": "Conflict"
+      }
+    },
+    {
+      "id": "training_note",
+      "type": "annotation",
+      "name": "实训说明",
+      "position": [
+        0,
+        5.2,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "text": "交通灯PLC实训：南北放行 → 南北黄灯 → 全红 → 东西放行 → 东西黄灯 → 全红。车辆只在对应绿灯时通行。",
+        "icon": "info",
+        "tag": "",
+        "unit": "",
+        "decimals": 0
+      }
+    }
+  ]
+}

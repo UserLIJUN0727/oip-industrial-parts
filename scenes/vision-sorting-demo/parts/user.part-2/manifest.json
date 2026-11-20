@@ -1,0 +1,31 @@
+{
+  "id": "user.part-2",
+  "name": "My Part 2",
+  "category": "Equipment",
+  "geometry": {
+    "kind": "rig",
+    "links": [
+      {
+        "name": "body",
+        "shape": {
+          "kind": "box",
+          "size": [
+            0.6,
+            0.6,
+            0.6
+          ]
+        },
+        "offset": [
+          0,
+          0.3,
+          0
+        ]
+      }
+    ],
+    "joints": []
+  },
+  "sdk": {
+    "level": 6,
+    "of": "v2:547:16x6y6we7sf"
+  }
+}

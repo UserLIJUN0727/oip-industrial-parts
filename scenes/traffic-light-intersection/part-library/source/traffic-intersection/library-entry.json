@@ -1,0 +1,6 @@
+{
+  "id": "userlijun0727.traffic-intersection",
+  "name": "Four-Way Traffic Intersection",
+  "category": "Training Equipment",
+  "description": "Procedural four-way road intersection with lane markings, four traffic-light sets, and simplified straight-through vehicles. Model package; PLC training scene is in the sibling project folder."
+}

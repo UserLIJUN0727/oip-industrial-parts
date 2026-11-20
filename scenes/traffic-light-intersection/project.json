@@ -1,0 +1,14 @@
+{
+  "version": 7,
+  "name": "十字路口交通灯实训",
+  "packages": [
+    "parts/training.traffic-intersection"
+  ],
+  "scene": "scene.json",
+  "program": [
+    "plc/TrafficLight.st"
+  ],
+  "tests": [
+    "tests/phase-sequence.test.json"
+  ]
+}

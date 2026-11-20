@@ -1,0 +1,73 @@
+{
+  "name": "四相位循环交替且不出现双向绿灯",
+  "duration": 24,
+  "checks": [
+    {
+      "at": 0.2,
+      "tag": "NS_Green",
+      "equals": true
+    },
+    {
+      "at": 0.2,
+      "tag": "EW_Red",
+      "equals": true
+    },
+    {
+      "at": 8.3,
+      "tag": "NS_Yellow",
+      "equals": true
+    },
+    {
+      "at": 10.4,
+      "tag": "NS_Red",
+      "equals": true
+    },
+    {
+      "at": 10.4,
+      "tag": "EW_Red",
+      "equals": true
+    },
+    {
+      "at": 11.4,
+      "tag": "EW_Green",
+      "equals": true
+    },
+    {
+      "at": 19.5,
+      "tag": "EW_Yellow",
+      "equals": true
+    },
+    {
+      "at": 22.2,
+      "tag": "NS_Green",
+      "equals": true
+    },
+    {
+      "always": true,
+      "tag": "Conflict",
+      "equals": false
+    },
+    {
+      "eventually": true,
+      "until": 8,
+      "probe": {
+        "joint": {
+          "part": "intersection",
+          "joint": "car_north"
+        }
+      },
+      "min": 1
+    },
+    {
+      "eventually": true,
+      "until": 19,
+      "probe": {
+        "joint": {
+          "part": "intersection",
+          "joint": "car_east"
+        }
+      },
+      "min": 1
+    }
+  ]
+}
