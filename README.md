@@ -1,6 +1,6 @@
 # My Industrial Parts Library
 
-This is a personal Open Industry Project (OIP) part library. The first release collects four user-created 3D equipment models:
+This is a personal Open Industry Project (OIP) part library. The library currently collects five user-created 3D equipment models:
 
 | Part | Library ID | Current behavior |
 |---|---|---|
@@ -8,17 +8,19 @@ This is a personal Open Industry Project (OIP) part library. The first release c
 | Compact STS Crane | `userlijun0727.compact-sts-crane` | Static model; trolley/spreader do not move |
 | Tow Tractor AGV | `userlijun0727.agv-tow-tractor` | Static model |
 | Lift AMR | `userlijun0727.lift-amr` | Static model; lift does not animate |
+| Three-Floor Elevator | `userlijun0727.three-floor-elevator` | Moving cabin and articulated doors; see the independent training scene |
 
 Each published `.oippart` is a portable OIP package containing its manifest, behavior source, and model assets. The original imported part folders are preserved under `source/`; the package builder never changes those source manifests. License metadata is currently **All rights reserved** for both code and model assets; no open-use license is granted.
 
 ## Training scenes
 
-The repository is public. These two OIP training projects are kept in separate folders so they can be downloaded and opened independently:
+The repository is public. These OIP training projects are kept in separate folders so they can be downloaded and opened independently:
 
 - [Vision Sorting Demo](scenes/vision-sorting-demo/README.md) — simulated RGB sorting, palletizing, wrapping, and AGV delivery.
 - [Four-Way Traffic Intersection](scenes/traffic-light-intersection/README.md) — a two-road signal cycle with a reusable intersection model.
+- [Three-Floor Elevator Demo](scenes/three-floor-elevator-demo/README.md) — PLC-controlled cabin movement, floor calls, doors, and emergency-stop recovery.
 
-The scene folders have their own scoped MIT licenses. Those licenses do **not** change the rights for the four existing models listed above. The Vision Sorting Demo also includes unmodified OIP component copies; see its third-party notice.
+The Vision Sorting Demo and Four-Way Traffic Intersection have scoped MIT licenses. The elevator scene and its custom part follow the repository-root library license stated above; the scoped MIT licenses do not change the rights for the library models. The scene folders that include unmodified OIP component copies carry separate third-party notices.
 
 ## Add future parts
 

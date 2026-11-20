@@ -1,0 +1,72 @@
+{
+  "name": "Emergency stop blocks queued motion until released and reset",
+  "duration": 11,
+  "inputs": [
+    {
+      "at": 0.2,
+      "tag": "EStopOK",
+      "value": false
+    },
+    {
+      "at": 0.5,
+      "tag": "CallF3",
+      "value": true
+    },
+    {
+      "at": 0.7,
+      "tag": "CallF3",
+      "value": false
+    },
+    {
+      "at": 2,
+      "tag": "EStopOK",
+      "value": true
+    },
+    {
+      "at": 2.2,
+      "tag": "ResetPB",
+      "value": true
+    },
+    {
+      "at": 2.4,
+      "tag": "ResetPB",
+      "value": false
+    }
+  ],
+  "checks": [
+    {
+      "always": true,
+      "from": 0.3,
+      "until": 1.9,
+      "tag": "SafetyTrip",
+      "equals": true
+    },
+    {
+      "always": true,
+      "from": 0.3,
+      "until": 1.9,
+      "tag": "LiftEnable",
+      "equals": false
+    },
+    {
+      "always": true,
+      "from": 0.3,
+      "until": 1.9,
+      "tag": "AtFloor1",
+      "equals": true
+    },
+    {
+      "eventually": true,
+      "from": 2.4,
+      "until": 3,
+      "tag": "SafetyTrip",
+      "equals": false
+    },
+    {
+      "eventually": true,
+      "within": 10.5,
+      "tag": "AtFloor3",
+      "equals": true
+    }
+  ]
+}

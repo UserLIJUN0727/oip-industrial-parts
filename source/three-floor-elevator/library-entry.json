@@ -1,0 +1,6 @@
+{
+  "id": "userlijun0727.three-floor-elevator",
+  "name": "Three-Floor Elevator",
+  "category": "Equipment",
+  "description": "Three-level elevator teaching model with a moving cabin, articulated landing and car doors, floor call buttons, and PLC tags for floor requests, motion, doors, and faults. The included scene and IEC Structured Text program demonstrate the built-in OIP simulation only; no external PLC is connected."
+}

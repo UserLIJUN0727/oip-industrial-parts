@@ -1,0 +1,18 @@
+{
+  "version": 7,
+  "name": "Three-Floor-Elevator-Demo",
+  "packages": [
+    "parts/oip.push-button",
+    "parts/oip.stack-light",
+    "parts/user.three-floor-elevator"
+  ],
+  "scene": "scene.json",
+  "program": [
+    "plc/program.st"
+  ],
+  "stScanMs": 20,
+  "tests": [
+    "tests/Floor_3_request_moves_the_cabin_and_opens_its_doors.test.json",
+    "tests/Emergency_stop_blocks_queued_motion_until_released_and_reset.test.json"
+  ]
+}

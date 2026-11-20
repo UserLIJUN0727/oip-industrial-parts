@@ -1,0 +1,74 @@
+{
+  "name": "Floor 3 request moves the cabin and opens its doors",
+  "duration": 9,
+  "inputs": [
+    {
+      "at": 0.5,
+      "tag": "CallF3",
+      "value": true
+    },
+    {
+      "at": 0.7,
+      "tag": "CallF3",
+      "value": false
+    }
+  ],
+  "checks": [
+    {
+      "at": 0.2,
+      "tag": "AtFloor1",
+      "equals": true
+    },
+    {
+      "eventually": true,
+      "within": 1.5,
+      "tag": "LiftMoving",
+      "equals": true
+    },
+    {
+      "always": true,
+      "from": 0,
+      "until": 9,
+      "tag": "InvalidFloorCommand",
+      "equals": false
+    },
+    {
+      "always": true,
+      "from": 0,
+      "until": 9,
+      "tag": "LiftServoFault",
+      "equals": false
+    },
+    {
+      "always": true,
+      "from": 0,
+      "until": 9,
+      "tag": "DoorServoFault",
+      "equals": false
+    },
+    {
+      "always": true,
+      "from": 0,
+      "until": 9,
+      "tag": "ElevatorFault",
+      "equals": false
+    },
+    {
+      "eventually": true,
+      "within": 7,
+      "tag": "AtFloor3",
+      "equals": true
+    },
+    {
+      "eventually": true,
+      "within": 8,
+      "tag": "DoorsOpen",
+      "equals": true
+    },
+    {
+      "at": 8.5,
+      "tag": "DoorClosed",
+      "equals": false
+    }
+  ]
+}

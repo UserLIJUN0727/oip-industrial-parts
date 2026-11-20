@@ -1,0 +1,210 @@
+{
+  "version": 4,
+  "parts": [
+    {
+      "id": "elevator",
+      "type": "part",
+      "packageId": "user.three-floor-elevator",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotationY": 0,
+      "params": {
+        "targetFloor": 1,
+        "targetFloorTag": "TargetFloor",
+        "moveEnableTag": "LiftEnable",
+        "doorOpenTag": "DoorOpenCmd",
+        "atFloor1Tag": "AtFloor1",
+        "atFloor2Tag": "AtFloor2",
+        "atFloor3Tag": "AtFloor3",
+        "atTargetTag": "AtTarget",
+        "movingTag": "LiftMoving",
+        "doorClosedTag": "DoorClosed",
+        "doorOpenStatusTag": "DoorsOpen",
+        "invalidCommandTag": "InvalidFloorCommand",
+        "liftDriveFaultTag": "LiftServoFault",
+        "doorDriveFaultTag": "DoorServoFault",
+        "faultTag": "ElevatorFault"
+      }
+    },
+    {
+      "id": "call-f1",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        0.52,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "F1",
+        "buttonColor": "#35c759",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "tag",
+        "tag": "CallF1",
+        "lampTag": "ReqF1"
+      }
+    },
+    {
+      "id": "call-f2",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        0.87,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "F2",
+        "buttonColor": "#f5a623",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "tag",
+        "tag": "CallF2",
+        "lampTag": "ReqF2"
+      }
+    },
+    {
+      "id": "call-f3",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        1.22,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "F3",
+        "buttonColor": "#3978d4",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "tag",
+        "tag": "CallF3",
+        "lampTag": "ReqF3"
+      }
+    },
+    {
+      "id": "door-open",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        1.57,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "OPEN",
+        "buttonColor": "#35c759",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "press",
+        "tag": "DoorOpenPB",
+        "lampTag": ""
+      }
+    },
+    {
+      "id": "door-close",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        1.92,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "CLOSE",
+        "buttonColor": "#f5a623",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "press",
+        "tag": "DoorClosePB",
+        "lampTag": ""
+      }
+    },
+    {
+      "id": "emergency-stop",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        2.27,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": true,
+        "text": "ESTOP",
+        "buttonColor": "#b3140f",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "press",
+        "tag": "EStopOK",
+        "lampTag": ""
+      }
+    },
+    {
+      "id": "reset",
+      "type": "part",
+      "packageId": "oip.push-button",
+      "position": [
+        2.28,
+        2.62,
+        1.59
+      ],
+      "rotationY": 0,
+      "params": {
+        "emergencyStop": false,
+        "text": "RESET",
+        "buttonColor": "#3978d4",
+        "momentary": true,
+        "startPressed": false,
+        "startStruck": false,
+        "normallyClosed": false,
+        "lampSource": "press",
+        "tag": "ResetPB",
+        "lampTag": ""
+      }
+    },
+    {
+      "id": "status-light",
+      "type": "part",
+      "packageId": "oip.stack-light",
+      "position": [
+        2.28,
+        3.12,
+        1.48
+      ],
+      "rotationY": 0,
+      "params": {
+        "segments": 3,
+        "value": 1,
+        "tag": "StatusLampTag"
+      }
+    }
+  ]
+}

@@ -66,6 +66,21 @@
       ],
       "category": "Equipment",
       "description": "Low-profile lift AMR visual model for factory layout. It is a static display part with no lift animation, drive behavior, or PLC tags."
+    },
+    {
+      "id": "userlijun0727.three-floor-elevator",
+      "name": "Three-Floor Elevator",
+      "versions": [
+        {
+          "file": "userlijun0727.three-floor-elevator/9f6e67019635833d6919f898b9c6e1a8308e10d12c5ac00bacec048fee0d2ff8.oippart",
+          "sha256": "9f6e67019635833d6919f898b9c6e1a8308e10d12c5ac00bacec048fee0d2ff8",
+          "fingerprint": "v2:35816:l5o6izl32j",
+          "sdk": 6,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Equipment",
+      "description": "Three-level elevator teaching model with a moving cabin, articulated landing and car doors, floor call buttons, and PLC tags for floor requests, motion, doors, and faults. The included scene and IEC Structured Text program demonstrate the built-in OIP simulation only; no external PLC is connected."
     }
   ]
 }
