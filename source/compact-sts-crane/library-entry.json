@@ -1,0 +1,6 @@
+{
+  "id": "userlijun0727.compact-sts-crane",
+  "name": "Compact STS Crane",
+  "category": "Equipment",
+  "description": "Compact ship-to-shore container crane model for scene layout. The trolley and spreader are visual subassemblies only; the model has no articulated motion or PLC behavior."
+}

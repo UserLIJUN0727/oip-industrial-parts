@@ -1,0 +1,61 @@
+{
+  "id": "user.agv.lift-amr",
+  "name": "Lift AMR（潜伏顶升）",
+  "category": "Equipment",
+  "geometry": {
+    "kind": "rig",
+    "links": [
+      {
+        "name": "visual",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "collision": "none"
+      },
+      {
+        "name": "collider",
+        "shape": {
+          "kind": "box",
+          "size": [
+            0.92,
+            0.24,
+            0.62
+          ]
+        },
+        "offset": [
+          0,
+          0.185,
+          0
+        ],
+        "hidden": true
+      }
+    ],
+    "joints": [],
+    "bounds": {
+      "length": 1.02,
+      "width": 0.8,
+      "top": 0.41,
+      "bottom": 0
+    }
+  },
+  "assets": [
+    {
+      "id": "model",
+      "mime": "model/gltf-binary",
+      "file": "assets/e63c80af5f450863bda6b237798cdc54bb45f5e7912ce7c785d4b86c34ca8414.glb"
+    }
+  ],
+  "origin": {
+    "shelf": "v2:1935083:9hc75y9b2s"
+  },
+  "sdk": {
+    "level": 6,
+    "of": "v2:1935083:9hc75y9b2s"
+  }
+}

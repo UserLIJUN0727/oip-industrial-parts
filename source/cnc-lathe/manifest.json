@@ -1,0 +1,34 @@
+{
+  "id": "user.part-1",
+  "name": "My Part 1",
+  "category": "Equipment",
+  "geometry": {
+    "kind": "rig",
+    "links": [
+      {
+        "name": "body",
+        "shape": {
+          "kind": "mesh",
+          "asset": "mesh-1"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "joints": []
+  },
+  "assets": [
+    {
+      "id": "mesh-1",
+      "mime": "model/gltf-binary",
+      "file": "assets/027df61347ea54c98c63cf82ecd7d82b1b4cde32f3eace89428e6770d12ba64f.glb"
+    }
+  ],
+  "sdk": {
+    "level": 6,
+    "of": "v2:678454:1icdg1m6w5n"
+  }
+}

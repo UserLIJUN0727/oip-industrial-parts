@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "id": "userlijun0727.industrial-parts",
+  "name": "My Industrial Parts Library",
+  "licence": {
+    "code": "All rights reserved",
+    "assets": "All rights reserved"
+  },
+  "parts": [
+    {
+      "id": "userlijun0727.agv-tow-tractor",
+      "name": "Tow Tractor AGV",
+      "versions": [
+        {
+          "file": "userlijun0727.agv-tow-tractor/1e86a4710f7d7d6d3e4e09c0b82b1c1678550ccbca11e636444363c134cef122.oippart",
+          "sha256": "1e86a4710f7d7d6d3e4e09c0b82b1c1678550ccbca11e636444363c134cef122",
+          "fingerprint": "v2:2551831:1jgxgs5hypg",
+          "sdk": 6,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Equipment",
+      "description": "Tow-tractor style AGV visual model for factory layout. It is a static display part with no drive behavior or PLC tags."
+    },
+    {
+      "id": "userlijun0727.cnc-lathe",
+      "name": "CNC Lathe",
+      "versions": [
+        {
+          "file": "userlijun0727.cnc-lathe/18899e58e91c651b95bbcb8d8972f278d791e4ca1f2297a52bc133517c98d9eb.oippart",
+          "sha256": "18899e58e91c651b95bbcb8d8972f278d791e4ca1f2297a52bc133517c98d9eb",
+          "fingerprint": "v2:678466:z3wumc14or",
+          "sdk": 6,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Equipment",
+      "description": "Static CNC lathe teaching model for scene layout. It has no G-code interpreter, machining simulation, spindle motion, tool changing, or PLC behavior."
+    },
+    {
+      "id": "userlijun0727.compact-sts-crane",
+      "name": "Compact STS Crane",
+      "versions": [
+        {
+          "file": "userlijun0727.compact-sts-crane/f5ffc392985e61ff82616082b98f3576c14c2b028c635147efce91dc282d1b38.oippart",
+          "sha256": "f5ffc392985e61ff82616082b98f3576c14c2b028c635147efce91dc282d1b38",
+          "fingerprint": "v2:562155:2a8j3n09prh",
+          "sdk": 6,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Equipment",
+      "description": "Compact ship-to-shore container crane model for scene layout. The trolley and spreader are visual subassemblies only; the model has no articulated motion or PLC behavior."
+    },
+    {
+      "id": "userlijun0727.lift-amr",
+      "name": "Lift AMR",
+      "versions": [
+        {
+          "file": "userlijun0727.lift-amr/b9f731e7b486e94a9b49dead92975369ca03417c73c9eea7043d4574c87b86f2.oippart",
+          "sha256": "b9f731e7b486e94a9b49dead92975369ca03417c73c9eea7043d4574c87b86f2",
+          "fingerprint": "v2:1935082:1n1ei7riy7t",
+          "sdk": 6,
+          "published": "2026-11-20"
+        }
+      ],
+      "category": "Equipment",
+      "description": "Low-profile lift AMR visual model for factory layout. It is a static display part with no lift animation, drive behavior, or PLC tags."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "id": "userlijun0727.cnc-lathe",
+  "name": "CNC Lathe",
+  "category": "Equipment",
+  "description": "Static CNC lathe teaching model for scene layout. It has no G-code interpreter, machining simulation, spindle motion, tool changing, or PLC behavior."
+}

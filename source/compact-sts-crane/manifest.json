@@ -1,0 +1,139 @@
+{
+  "id": "generated.compact-sts-crane",
+  "name": "Compact STS Crane",
+  "category": "Equipment",
+  "geometry": {
+    "kind": "rig",
+    "links": [
+      {
+        "name": "PortalFrame",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "PortalFrame"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "WatersideBoom",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "WatersideBoom"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "PortalFrame"
+      },
+      {
+        "name": "LandsideBoom",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "LandsideBoom"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "PortalFrame"
+      },
+      {
+        "name": "MachineryHouse",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "MachineryHouse"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "PortalFrame"
+      },
+      {
+        "name": "Trolley",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "Trolley"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "PortalFrame"
+      },
+      {
+        "name": "HoistRopes",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "HoistRopes"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "Trolley"
+      },
+      {
+        "name": "Spreader",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "Spreader"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "HoistRopes"
+      },
+      {
+        "name": "RailBogies",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model",
+          "node": "RailBogies"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "parent": "PortalFrame"
+      }
+    ],
+    "joints": [],
+    "bounds": {
+      "length": 24,
+      "width": 10,
+      "top": 12
+    }
+  },
+  "assets": [
+    {
+      "id": "model",
+      "mime": "model/gltf-binary",
+      "file": "assets/c6f4308ac27ca64fcac4639e7b2ef65fc943708992066eef3e4c71f9f71ea23a.glb"
+    }
+  ],
+  "materials": [],
+  "sdk": {
+    "level": 6,
+    "of": "v2:1413:aklbzo0e3e"
+  }
+}

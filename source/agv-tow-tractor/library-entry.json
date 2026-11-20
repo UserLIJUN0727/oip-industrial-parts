@@ -1,0 +1,6 @@
+{
+  "id": "userlijun0727.agv-tow-tractor",
+  "name": "Tow Tractor AGV",
+  "category": "Equipment",
+  "description": "Tow-tractor style AGV visual model for factory layout. It is a static display part with no drive behavior or PLC tags."
+}

@@ -1,0 +1,62 @@
+{
+  "id": "user.agv.tow-tractor",
+  "name": "Tow Tractor AGV（牵引式）",
+  "category": "Equipment",
+  "geometry": {
+    "kind": "rig",
+    "links": [
+      {
+        "name": "visual",
+        "shape": {
+          "kind": "mesh",
+          "asset": "model"
+        },
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "collision": "none"
+      },
+      {
+        "name": "collider",
+        "shape": {
+          "kind": "box",
+          "size": [
+            1.2,
+            0.76,
+            0.62
+          ]
+        },
+        "offset": [
+          -0.02,
+          0.48,
+          0
+        ],
+        "hidden": true
+      }
+    ],
+    "joints": [],
+    "bounds": {
+      "length": 1.53,
+      "width": 0.8,
+      "top": 0.99,
+      "bottom": 0,
+      "centerX": -0.145
+    }
+  },
+  "assets": [
+    {
+      "id": "model",
+      "mime": "model/gltf-binary",
+      "file": "assets/d11871544ddef6378a39a2b4f2d8eb7ab7ce9f9f0c11302e3afdc1d60a8bcc6c.glb"
+    }
+  ],
+  "origin": {
+    "shelf": "v2:2551827:157g4vua7ce"
+  },
+  "sdk": {
+    "level": 6,
+    "of": "v2:2551827:157g4vua7ce"
+  }
+}
